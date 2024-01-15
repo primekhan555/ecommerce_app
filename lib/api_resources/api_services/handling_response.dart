@@ -1,13 +1,15 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
+
+import 'package:dio/dio.dart';
 
 import '../../core/core.dart';
 import 'api_response.dart';
 
 class HandlingResponse {
-  static ApiResponse returnResponse(http.Response response) {
+  static ApiResponse returnResponse(Response response) {
     switch (response.statusCode) {
       case 200:
         return ApiResponse.completed(response);

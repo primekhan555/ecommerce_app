@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'dart:isolate';
 
+import 'package:dio/dio.dart';
 import 'package:ecommerceapp/api_resources/api_models/products_model.dart';
-import 'package:http/http.dart';
+// import 'package:http/http.dart';
 
 import '../../constants/app_api_paths.dart';
 import '../../core/app_print.dart';
@@ -20,9 +21,9 @@ class HomeRepoImp extends HomeRepo {
       console('REPO : ${result.status}');
       if (result.status == Status.completed) {
         ProductsModel data = await Isolate.run(
-            () => ProductsModel.fromJson(json.decode(res.body)));
+            () => ProductsModel.fromJson(res.data));
         if (allowLocalSaveAndGet) {
-          DataBoxes.ins.setData(AppApiPaths.products, res.body);
+          DataBoxes.ins.setData(AppApiPaths.products, json.encode(res.data));
         }
         return ApiResponse.completed(data);
       } else {
