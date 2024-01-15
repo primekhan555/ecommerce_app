@@ -1,16 +1,19 @@
 # ecommerceapp
 
-A new Flutter project.
+Ecommerce App.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+valuation Criteria:
+Functionality: Does the app meet the defined requirements?
+yes it meet.
 
-A few resources to get you started if this is your first Flutter project:
+Code Quality: Is the code efficient, readable, and well-organized?
+yes code is efficient , readable and well-organized.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+UI/UX Design: Is the application intuitive, user-friendly, and visually appealing?
+yes the app is visually appealing and user-friendly.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Technical Implementation: Effectiveness of state management, API integration, and optional
+features.
+for state management i used Riverpod, API integration is done with Dio, 
