@@ -23,6 +23,7 @@ class ItemCard extends ConsumerWidget {
           Expanded(
             child: Container(
               padding: const EdgeInsets.all(AppConstants.kDefaultPaddin),
+              alignment: Alignment.center,
               decoration: BoxDecoration(
                 // color: product.color,
                 borderRadius: BorderRadius.circular(16),
