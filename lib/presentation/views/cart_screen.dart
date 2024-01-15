@@ -38,7 +38,9 @@ class CartScreen extends ConsumerWidget {
           ),
           // Categories(),
           Expanded(
-            child: Padding(
+            child:
+            cartProducts.isEmpty? const Center(child: Text('No Item in Cart')):
+             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: AppConstants.kDefaultPaddin),
                 child: GridView(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
